@@ -1,58 +1,66 @@
-# Salesforce DX Project
+# Customer Support Ticket Priority Prediction and Automated Assignment System Using Agentforce
 
-Salesforce DX is a development approach that brings source-driven development, team collaboration, and continuous integration to the Salesforce Platform. Instead of working directly in an org through a web browser, you work with metadata as source files in a local DX project, track changes in version control, and deploy through automated processes.
+A Salesforce-based Customer Support Ticket System designed to manage support requests, predict ticket priorities, identify potential SLA breaches, and support automated ticket assignment using Salesforce and Agentforce.
 
-This project template gets you started with the tools and structure you need to build Salesforce applications using source control, scratch orgs, and the Salesforce CLI.
+## Project Overview
 
-## Prerequisites
+The system aims to improve customer support efficiency by organizing tickets and helping support teams identify urgent issues and manage them effectively.
 
-Before you start, make sure you have:
+## Key Features
 
-- **Salesforce CLI** - Download from [developer.salesforce.com/tools/salesforcecli](https://developer.salesforce.com/tools/salesforcecli). See [Install Salesforce CLI](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_install_cli.htm) for details.
-- **VS Code with Salesforce Extension Pack** - See [Installation Instructions](https://developer.salesforce.com/docs/platform/sfvscode-extensions/guide/install.html) for details. Includes the Agentforce Vibes extension.
-- **A development org** - Sign up for a free Developer Edition org [here](https://developer.salesforce.com/signup).
-- **Dev Hub enabled** (optional, required to create scratch orgs) - You can enable Dev Hub in your development org under Setup > Dev Hub.  See [Provide Developers Access to Salesforce DX Tools](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_setup_dx_tools.htm).
+- **Ticket Management:** Store and manage customer support tickets.
+- **Priority Prediction:** Support priority classification based on ticket information.
+- **Automated Assignment:** Designed to assign tickets to appropriate support agents.
+- **SLA Breach Risk:** Track potential risks of missing service-level agreements.
+- **Ticket Status Tracking:** Monitor ticket progress and resolution.
+- **Salesforce Integration:** Built using Salesforce metadata and Salesforce CLI.
+
+## Technology Stack
+
+- Salesforce Platform
+- Salesforce CLI
+- Visual Studio Code
+- Git and GitHub
+- Agentforce
 
 ## Project Structure
 
-Your DX project follows this structure:
+- `force-app/main/default/` — Salesforce metadata, including custom objects, fields, and other components.
+- `config/` — Salesforce project configuration.
+- `scripts/` — Project scripts, if present.
+- `sfdx-project.json` — Salesforce DX project configuration.
 
-- **`force-app/main/default/`** - Your metadata source files live in this default package directory. You can configure additional package directories in the `sfdx-project.json` file.
-- **`config/`** - Scratch org definitions and project settings
-- **`scripts/`** - Automation scripts for common tasks
-- **`sfdx-project.json`** - Project manifest that defines package directories, namespace, API version, and other project-level settings
+## Prerequisites
 
-See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm).
+- Salesforce CLI
+- Visual Studio Code with Salesforce Extension Pack
+- A Salesforce development org
+- Git
 
-## Get Started
+## Setup
 
-Ready to start developing? The [Get Started with Salesforce DX](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_get_started_dx.htm) guide walks you through your first project, from creating a scratch org to creating a simple Apex class or LWC to deploying your code to a sandbox.
+1. Clone or download this repository.
+2. Open the project folder in Visual Studio Code.
+3. Open the terminal in the project directory.
+4. Authenticate with your Salesforce org:
 
-## Common Salesforce CLI Commands
+   ```bash
+   sf org login web
+   ```
 
-Here are common CLI commands that you'll use the most:
+5. Deploy the required metadata:
 
-- `sf org login web`: Authorize an org
-- `sf org open`: Open your org in a browser
-- `sf org create scratch`: Create a scratch org
-- `sf project deploy start`: Deploy metadata to your org
-- `sf project retrieve start`: Retrieve metadata from your org
-- `sf template generate <artifact>`: Scaffold new components, such as Apex classes and triggers, LWC components, Lightning apps, and more
-- `sf apex <command>`: Run Apex tests, run anonymous Apex blocks, and view logs
-- `sf data <command>`: Work with test data
-- `sf alias <command>`: Manage org aliases
-- `sf config <command>`: Configure CLI settings
+   ```bash
+   sf project deploy start
+   ```
 
-## Use Agentforce Vibes to Build Lightning Apps
+## Project Status
 
-Transform your ideas into custom Lightning apps that extend CRM workflows directly in Lightning Experience. Through natural conversations with Agentforce Vibes, implement custom objects and fields, complex business logic, and dynamic UI components. See [Build a Lightning App Using Agentforce Vibes](https://developer.salesforce.com/docs/platform/einstein-for-devs/guide/lexapp-overview.html).
+The Salesforce project structure and custom ticket metadata have been created. Priority prediction logic, automated assignment, and other advanced features should be implemented and tested before describing them as fully functional.
 
-## Additional Resources
+## Future Enhancements
 
-- [Agentforce Vibes Developer Guide](https://developer.salesforce.com/docs/platform/einstein-for-devs/guide/einstein-overview.html)
-- [Salesforce CLI Installation Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/)
-- [Salesforce CLI Plugin Development Guide](https://developer.salesforce.com/docs/platform/salesforce-cli-plugin/guide/conceptual-overview.html)
-- [Salesforce VS Code Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-
+- AI-assisted ticket priority prediction.
+- Rule-based or AI-assisted agent assignment.
+- SLA breach alerts.
+- Explainable ticket classification and reporting.
